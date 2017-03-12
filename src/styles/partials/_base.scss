@@ -1,0 +1,184 @@
+// Variables
+    // colors
+$darkgray: darkgray;
+$white: white;
+$black: black;
+$red: red;
+
+    // fontsizes
+$btnFontsize: 35px;
+$panelMsgFontsize: 1.6rem;
+$restartBtnFontsize: 1.2rem;
+$squareFontsize: 70px;
+
+// DOMS
+body {
+    background-color: $white;
+    font-family: 'Baloo', cursive;
+    margin: 0;
+    padding: 0;
+
+}
+
+button{
+    border: 0;
+    padding: 15px;
+    font-size: $btnFontsize;
+    font-family: inherit;
+    cursor: pointer;
+    
+    &:hover {
+        background-color: $darkgray;
+    }
+}
+
+
+// classes
+#StatusPanel{
+    background-color: $black;
+    color: $white;
+    font-size: $panelMsgFontsize;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top: 10px;
+    line-height: 2.2;
+    text-align: center;
+}
+
+.StatusPanel-restart {
+    position: absolute;
+    left: 50px;
+    font-size: $restartBtnFontsize;
+    font-weight: normal;
+    font-family: sarif;
+    transform: rotate(-5deg);
+}
+
+.StatusPanel-restart span {
+    background-color: lighten($black, 15%);
+    color: darken(red, 20%);
+    padding: 0 5px;
+    margin-left: 10px;
+    margin-top: 10px;
+    line-height: 1.5;
+    border: 1px solid lighten($black, 10%);
+    border-radius: 5px;
+    cursor: pointer;
+    
+    &:hover{
+        border: 1px solid $red;
+        color: lightgray;
+    }
+
+    &:active {
+        border: 1px solid lighten($red, 30%);
+        color: $white;
+
+    }
+}
+
+
+
+#Board {
+    width: 400px;
+    margin: 80px auto 40px;
+}
+
+#Board .Square-container {
+    background-color: $white;
+    color: $black;
+    border: 1px solid $darkgray;
+    width:100px;
+    height:100px;
+    font-weight: bold;
+    font-size: $squareFontsize;
+    text-align: center;
+    margin: 15px;
+    display: inline-block;
+    text-transform: uppercase;
+    line-height: 1.5;
+    cursor: pointer;
+
+    &:hover {
+        background-color: lighten($darkgray, 30%);
+    }
+}
+
+#ScoreBoard {
+    background-color: $darkgray;
+    color: lighten($black, 10%);  
+    width: 400px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.ScoreBoard-container {
+    text-align: center;        
+
+    h2 {
+        margin: 10px;
+        display: inline-block;
+        font-size: 50px;
+
+    }
+
+    .ScoreBoard-container-keys {
+        font-weight: normal;
+        margin-right: 10px;
+    }
+
+    .ScoreBoard-container-values {
+        font-family: monospace;
+    }
+}
+
+
+#DisableBoard{
+    background-color: transparent;
+    width:800px;
+    height: 600px;
+    position:absolute;
+    top: 0;
+}
+
+#Game-starter {
+    background-color: $white;
+    padding: 40px;
+    border: 1px solid $black;
+    width: 600px;
+    text-align: center;
+    margin: 100px auto;
+
+    h2 {
+        margin-top: 0;
+    }
+
+    button {
+        margin-left: 10px;
+    }
+}
+
+
+
+// utility classes
+
+.u-flexRow {
+    display: flex;
+}
+
+.u-block{
+    display: block;
+}
+
+.u-inlineBlock{
+    display: inline-block;
+}
+
+.u-show {
+    display: block;
+}
+
+.u-hide {
+    display: none;
+}
